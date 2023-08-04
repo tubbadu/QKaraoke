@@ -1,0 +1,8 @@
+module QKaraoke
+linktarget QKaraokeplugin
+optional plugin QKaraokeplugin
+classname QKaraokePlugin
+typeinfo QKaraoke.qmltypes
+prefer :/QKaraoke/
+Main 1.0 Main.qml
+

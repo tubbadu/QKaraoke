@@ -1,0 +1,14 @@
+-rootPath
+/home/tubbadu/code/Qt/QKaraoke
+-cmake-output
+-output-file
+/home/tubbadu/code/Qt/QKaraoke/build/.qt_plugins/Qt6_QmlPlugins_Imports_appQKaraoke.cmake
+-importPath
+/home/tubbadu/code/Qt/QKaraoke/build/QKaraoke
+-importPath
+/home/tubbadu/code/Qt/QKaraoke/build
+-importPath
+/usr/lib/qt6/qml
+-qrcFiles
+/home/tubbadu/code/Qt/QKaraoke/build/.rcc/qmake_QKaraoke.qrc
+/home/tubbadu/code/Qt/QKaraoke/build/.rcc/appQKaraoke_raw_qml_0.qrc

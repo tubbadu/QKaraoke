@@ -1,0 +1,5 @@
+module QKaraoke
+typeinfo appQKaraoke.qmltypes
+prefer :/QKaraoke/
+Main 1.0 Main.qml
+

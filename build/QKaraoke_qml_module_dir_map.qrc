@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/QKaraoke">/home/tubbadu/code/Qt/QKaraoke/build</file>
+
+  </qresource>
+</RCC>

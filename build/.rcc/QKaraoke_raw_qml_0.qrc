@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/QKaraoke/">
+    <file alias="Main.qml">/home/tubbadu/code/Qt/QKaraoke/Main.qml</file>
+  </qresource>
+</RCC>
+
