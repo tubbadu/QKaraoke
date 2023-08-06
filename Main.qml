@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import QtMultimedia
 import Qt.labs.folderlistmodel
 import Qt.labs.platform
+import Qt.labs.settings
 
 Window {
     id: root
@@ -394,6 +395,11 @@ Window {
                     createMatches()
                 }
             }
+        }
+
+        Settings {
+            property alias karaokeFolder: musicFolder.text
+            property alias karaokePlayers: playersTextArea.text
         }
     }
 
