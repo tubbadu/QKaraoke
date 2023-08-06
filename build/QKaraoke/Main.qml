@@ -43,10 +43,11 @@ Window {
         let g1 = matches[2*index]
         let g2 = matches[2*index + 1]
         let song = files[index]
+        player.stop()
         player.setSource(song)
         popup.setPlayers(g1, g2)
         popup.show()
-        player.play()
+        //player.visible = false
     }
 
     function previousSong(){
@@ -140,24 +141,30 @@ Window {
         anchors.fill: parent
         visible: false
 
-        Text {
+        Rectangle {
             id: popup
-
+            anchors.fill: parent
             function setPlayers(g1, g2){
                 text = "Now singing:<br><h1>" + g1 + " & " + g2 + "</h1><br>"
             }
+            property alias text: popuptext.text
+            color: "black"
+            Text {
+                id: popuptext
+                anchors.centerIn: parent
+                width: parent.width * 0.9
+                horizontalAlignment: Text.AlignHCenter
+                text : "Now singing:<br><h1>tizio & caio</h1><br>"
+                textFormat: Text.RichText
+                style: Text.Outline
+                styleColor: "black"
+                color: "white"
+                font.pixelSize: parent.width / 40
+            }
 
-            anchors.centerIn: parent
-            width: parent.width * 0.9
-            horizontalAlignment: Text.AlignHCenter
-            text : "Now singing:<br><h1>tizio & caio</h1><br>"
-            textFormat: Text.RichText
             visible: true
             z: 100
-            style: Text.Outline
-            styleColor: "black"
-            color: "white"
-            font.pixelSize: parent.width / 40
+
             Timer {
                 id: timer
                 interval: 3000
@@ -190,6 +197,13 @@ Window {
                 to: 1;
                 duration: 1000
                 running: false
+
+                onFinished: {
+                    if(opacityAnimator.from == 0) {
+                        //player.visible = true
+                        player.play()
+                    }
+                }
             }
         }
 
@@ -210,12 +224,6 @@ Window {
             }
             function pause(){
                 mediaPlayer.pause()
-            }
-            function next(){
-                //mediaPlayer.stop()
-            }
-            function restart(){
-                //mediaPlayer.stop()
             }
             function setSource(s){
                 mediaPlayer.source = s
